@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spinning Wheel</title>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Deferring the execution of the script.js file until the HTML content is loaded -->
+    <script src="script.js" defer></script>
+    <!-- Including SweetAlert2 library from a CDN (Content Delivery Network) and deferring its execution -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Wheel container -->
+      <div class="wheel">
+        <div class="inner">
+          <!-- Slices of the wheel (prizes) generated dynamically using Vue.js -->
+          <div class="slice" v-for="prize in prizes" :key="prize">
+            <span class="prize">{{prize}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="wheel-outer"></div>
+      <!-- SVG element for creating a dotted circle -->
+      <svg id="svg-dotted" viewBox="0 0 100 100">
+        <circle id="circle-dotted" cx="50" cy="50" r="40" />
+      </svg>
+      <!-- SVG element for creating an arrow shape -->
+      <svg id="svg-arrow" xmlns="http://www.w3.org/2000/svg">
+        <path
+          style="
+            fill: #ff2e52;
+            stroke: #012e52;
+            stroke-width: 4;
+            stroke-linejoin: round;
+          "
+          d="M 81.540414,49.378716 H 121.51935 L 101.4866,69.420346 Z"
+        />
+      </svg>
+      <!-- Button for triggering the spin action -->
+      <button class="btn" @click="spin" :disabled="activeBtn">SPIN</button>
+    </div>
+    <!-- Audio element for applause sound effect -->
+    <audio
+      controls
+      id="applauseSound"
+      src="assets/applause.mp3"
+      type="audio/mp3"
+    ></audio>
+    <!-- Audio element for spin sound effect -->
+    <audio
+      controls
+      id="spinSound"
+      src="assets/spin.mp3"
+      type="audio/mp3"
+    ></audio>
+    <!-- Including Vue.js library from a CDN (Content Delivery Network) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  </body>
+</html>
