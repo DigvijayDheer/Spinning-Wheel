@@ -33,7 +33,7 @@ To use the spinning wheel game, follow these steps:
 
 ## Credits
 
-This project was created by **[Digvijay Dheer]**.
+This project was created by **Digvijay Dheer**.
 
 Sound effects obtained from [SoundBible](http://soundbible.com/) under the Creative Commons license.
 
