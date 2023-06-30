@@ -1,6 +1,6 @@
 # Spinning Wheel
 
-This project is a web-based spinning wheel game implemented using Vue.js. Users can click on the "SPIN" button to spin the wheel and have a chance to win various prizes. The wheel will rotate for a random number of spins and stop at a random prize. A success message will be displayed with the prize value.
+This project is a web-based spinning wheel game implemented using Vue.js library for interactive interfaces. Users can click on the "SPIN" button to spin the wheel and have a chance to win various prizes. The wheel will rotate for a random number of spins and stop at a random prize. A success message will be displayed with the prize value.
 
 ## Features
 
@@ -8,7 +8,7 @@ This project is a web-based spinning wheel game implemented using Vue.js. Users 
 - Random number of spins and prize selection.
 - Sound effects for spinning and winning.
 - Stylish visual design with CSS animations.
-- Uses the Vue.js framework for dynamic interactivity.
+- Uses the Vue.js library for dynamic interactivity.
 
 ## Usage
 
